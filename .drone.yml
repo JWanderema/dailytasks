@@ -10,7 +10,7 @@ pipeline:
       event: push
 
   run-testrunner-tests:
-    image: quay.io/ukhomeofficedigital/tf-testrunner
+    image: docker:18.05
     commands: python -m unittest tests/*_test.py
     secrets:
       - AWS_ACCESS_KEY_ID
